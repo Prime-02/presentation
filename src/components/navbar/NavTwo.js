@@ -68,7 +68,7 @@ const NavTwo = () => {
               <Link
                 href={item.href}
                 key={index}
-                className="text-black font-medium hover:text-blue-600 transition-colors"
+                className="text-black font-medium hover:text-amber-600 transition-colors"
               >
                 {item.name}
               </Link>
@@ -102,7 +102,7 @@ const NavTwo = () => {
               <Link
                 href={item.href}
                 key={index}
-                className="text-black font-medium hover:text-blue-600 transition-colors"
+                className="text-black font-medium hover:text-amber-600 transition-colors"
               >
                 {item.name}
               </Link>
