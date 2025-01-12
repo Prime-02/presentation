@@ -32,7 +32,7 @@ const FAQCard = () => {
         <div className="w-full md:w-1/2">
           {FAQ.faqData.slice(0, 2).map((category, index) => (
             <div key={index} className="mb-8 w-full">
-              <div className="w-full flex justify-between mb-4 pb-2 items-center">
+              <div className="w-full flex flex-col md:flex-col justify-between mb-4 pb-2 items-start md:items-center">
                 <h2 className="text-2xl font-semibold">{category.category}</h2>
                 {index === 0 && (
                   <Link href={"/faq"}>

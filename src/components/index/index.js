@@ -15,8 +15,12 @@ export const navItems = [
 
 export const OnboardingTexts = {
   heading: "Seasoned attorneys are prepared to assist you.",
+  headingTwo:
+    "Providing expert guidance through legal challenges with care, understanding, and compassion.",
   subHeading:
     "Our lawyers are passionate, dedicated, and adaptable, ready to meet your needs.",
+  subHeadingTwo:
+    "We are dedicated to delivering effective legal representation with empathy, understanding, and unwavering commitment to our clients.",
 };
 
 export const AboutUsText = {
@@ -254,3 +258,4 @@ export const Testimonials = [
       "Lawcheck’s team was instrumental in helping me navigate a bankruptcy case. They provided clear guidance and unwavering support during a challenging time.",
   },
 ];
+

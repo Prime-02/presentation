@@ -90,38 +90,46 @@ const Navbar = () => {
         </span>
       </nav>
       <aside
-        className={`fixed flex flex-col justify-between items-start py-8 md:hidden z-50 h-screen top-0 bottom-0  w-[60%] bg-white right-0 rounded-l-2xl border transition duration-500 ${
+        className={`fixed flex flex-col justify-around items-start py-8 z-50 h-screen top-0 bottom-0 w-[80%] sm:w-[60%] md:w-[40%] lg:w-[30%] xl:w-[25%] bg-white right-0 rounded-l-2xl border shadow-lg transition-transform duration-500 ${
           aside ? "translate-x-0" : "translate-x-full"
-        }`}
+        } md:translate-x-0 md:static md:flex-row md:justify-between md:items-center md:py-4 md:h-auto md:bg-transparent md:border-none`}
       >
+        {/* Close Button */}
         <span
-          className="absolute right-4 cursor-pointer active:animate-spin text-black"
+          className="absolute right-4 top-4 cursor-pointer active:animate-spin text-black md:hidden"
           onClick={() => setAside(!aside)}
         >
           <X />
         </span>
-        <div className="flex flex-col justify-between gap-y-12 my-5 pt-16">
+
+        {/* Navigation Links */}
+        <div className="flex flex-col justify-between gap-y-12 my-5 pt-16 md:pt-0 md:flex-row md:gap-x-8 md:my-0">
           {navItems.map((link, i) => (
             <Link
               href={link.href}
               key={i}
-              className="text-black font-medium hover:text-blue-600 mx-5 transition-colors"
+              className="text-black font-medium hover:text-blue-600 mx-5 md:mx-0 transition-colors"
             >
               {link.name}
             </Link>
           ))}
         </div>
-        <div className="flex flex-row gap-x-5">
+
+        {/* Buttons */}
+        <div className="flex flex-row gap-x-5 md:gap-x-4">
           <ButtonOne
             buttonValue={"Log In"}
             Clicked={() => setLoginModal(!loginModal)}
+            className="text-sm md:text-base"
           />
           <ButtonTwo
             buttonValue={"Sign Up"}
             Clicked={() => setSignUpModal(!SignUpmodal)}
+            className="text-sm md:text-base"
           />
         </div>
       </aside>
+
       <Modal
         isOpen={loginModal}
         onClose={() => setLoginModal(!loginModal)}

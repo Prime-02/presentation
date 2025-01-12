@@ -23,18 +23,8 @@ body, p, span, div, a, li, button, input, textarea, select {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Dark theme styles */
-html[data-theme='dark'] {
-  --bg-color: #1a1a1a;
-  --text-color: #FDFFF5;
-  background-color: var(--bg-color);
-}
-
-/* Light theme styles */
-html[data-theme='light'] {
-  --bg-color: #FDFFF5;
-  --text-color: #1e293b; /* Updated text color */
-  background-color: var(--bg-color);
+:root{
+  color-scheme: 'light';
 }
 
 body {
