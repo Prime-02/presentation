@@ -1,0 +1,137 @@
+/* globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font Classes */
+.font-Montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-Poppins {
+  font-family: 'Poppins', sans-serif;
+}
+/* Set all header elements to Montserrat */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Set body and other text elements to Poppins */
+body, p, span, div, a, li, button, input, textarea, select {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Dark theme styles */
+html[data-theme='dark'] {
+  --bg-color: #1a1a1a;
+  --text-color: #FDFFF5;
+  background-color: var(--bg-color);
+}
+
+/* Light theme styles */
+html[data-theme='light'] {
+  --bg-color: #FDFFF5;
+  --text-color: #1e293b; /* Updated text color */
+  background-color: var(--bg-color);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+/* Add this to your global CSS file */
+
+
+.gradient-background {
+  background: linear-gradient(300deg,deepskyblue,darkviolet,blue);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#default-carousel {
+  overflow: hidden;
+}
+
+.transition-transform {
+  transition: transform 0.5s ease; /* Smooth transition */
+}
+
+/* Keyframes for continuous sliding effect */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.scroll-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Hides the overflowing content */
+}
+
+.scroll-content {
+  display: flex;
+  animation: slide 50s linear infinite; /* Continuous animation */
+}
+
+.scroll-item {
+  white-space: nowrap; /* Prevents wrapping */
+  margin-right: 20px; /* Adjust space between items */
+}
+
+
+/* Specific Theme-Based Classes */
+html[data-theme='dark'] .card {
+  background-color: #2b2b2b;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+html[data-theme='light'] .card {
+  background-color: #ffffff;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+
+/* Specific Theme-Based Classes */
+html[data-theme='dark'] .reversecard {
+  background-color: #ffffff;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+html[data-theme='light'] .reversecard {
+  background-color: #2b2b2b;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+
+/* globals.css or any other CSS file */
+@layer utilities {
+  .shape-geometricPrecision {
+    shape-rendering: geometricPrecision;
+  }
+
+  .text-geometricPrecision {
+    text-rendering: geometricPrecision;
+  }
+}
