@@ -3,12 +3,12 @@ import FooterTwo from '@assets/components/footer/FooterTwo'
 import NavTwo from '@assets/components/navbar/NavTwo'
 import React from 'react'
 import LandingPageImages from '../../../public/assets/images/lawchecks (8).jpg'
-import { AboutUsText, OnboardingTexts } from '@assets/components/index'
+import { AboutUsText, FAQ, OnboardingTexts } from '@assets/components/index'
 import Image from 'next/image'
-import { DBButtonOne } from '@assets/components/reusables/buttons/Buttons'
-import { Phone } from 'lucide-react'
 import Services from './components/Services'
 import AboutCard from './components/AboutCard'
+import FAQCard from './components/FAQCard'
+import {motion} from 'framer-motion'
 
 const page = () => {
   return (
@@ -35,9 +35,15 @@ const page = () => {
 
       <main className="md:flex hidden flex-row justify-between items-center w-full h-screen">
         <section className="h-full flex justify-center mr-5 w-1/2 items-center">
-          <div className="w-fit text-start mx-auto space-y-5 max-w-xl">
+          <motion.div
+            initial={{ translateX: -200 }}
+            whileInView={{ translateX: 0 }}
+            transition={{ duration: 0.5 }}
+            className="w-fit text-start mx-auto space-y-5 max-w-xl"
+          >
             <h1 className="text-4xl uppercase">
-              {OnboardingTexts.headingTwo.split(" ").slice(0, -4).join(" ")}<br/>
+              {OnboardingTexts.headingTwo.split(" ").slice(0, -4).join(" ")}
+              <br />
               <span className="text-4xl bg-gradient-to-r from-amber-800 to-amber-900 text-transparent bg-clip-text font-extrabold">
                 {OnboardingTexts.headingTwo.split(" ").slice(-4).join(" ")}
               </span>
@@ -46,18 +52,24 @@ const page = () => {
             <p className="text-sm font-bold tracking-tight">
               {OnboardingTexts.headingTwo}
             </p>
-          </div>
+          </motion.div>
         </section>
-        <div className="h-full w-1/2 flex items-center justify-center">
+        <motion.div
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="h-full w-1/2 flex items-center justify-center"
+        >
           <Image
             src={LandingPageImages}
             alt=""
             className="w-full h-full object-contain rounded-r-full"
           />
-        </div>
+        </motion.div>
       </main>
-      <Services/>
-      <AboutCard/>
+      <Services />
+      <AboutCard />
+      <FAQCard />
       <FooterTwo />
     </>
   );

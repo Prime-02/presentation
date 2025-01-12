@@ -80,11 +80,11 @@ export const DBButtonOne = ({
     onClick={Clicked}
     className={`${className} flex items-center justify-center text-sm transition-all duration-300 cursor-pointer shadow-md active:translate-y-1 ${
       IconButton
-        ? "w-9 h-9 rounded-full bg-blue-600 text-white border border-blue-600"
-        : "py-2 px-4 rounded-full bg-blue-600 text-white border border-blue-600"
-    } hover:bg-[#1a1a1a] hover:text-blue-600 ${
+        ? "w-9 h-9 rounded-full bg-amber-600 text-white border border-amber-600"
+        : "py-2 px-4 rounded-full bg-amber-600 text-white border border-amber-600"
+    } hover:bg-transparent hover:text-amber-600 ${
       disabled
-        ? "opacity-50 cursor-not-allowed hover:bg-blue-600 hover:text-white"
+        ? "opacity-50 cursor-not-allowed hover:bg-amber-600 hover:text-white"
         : ""
     }`}
   >
@@ -112,11 +112,11 @@ export const DBButtonTwo = ({
     onClick={Clicked}
     className={`${className} flex items-center justify-center text-sm transition-all duration-300 cursor-pointer shadow-md active:translate-y-1 ${
       IconButton
-        ? "w-9 h-9 rounded-full border border-blue-600 text-blue-600 bg-[#1a1a1a]"
-        : "py-2 px-4 rounded-full border border-blue-600 text-blue-600 bg-[#1a1a1a]"
-    } hover:bg-blue-600 hover:text-white ${
+        ? "w-9 h-9 rounded-full border border-amber-600 text-amber-600 bg-transparent"
+        : "py-2 px-4 rounded-full border border-amber-600 text-amber-600 bg-transparent"
+    } hover:bg-amber-600 hover:text-white ${
       disabled
-        ? "opacity-50 cursor-not-allowed hover:bg-[#1a1a1a] hover:text-blue-600"
+        ? "opacity-50 cursor-not-allowed hover:bg-transparent hover:text-amber-600"
         : ""
     }`}
   >
@@ -135,7 +135,7 @@ export const Button = ({ clicked, value }) => {
   return (
     <button
       onClick={clicked}
-      className="text-white flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-1.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 justify-center gap-x-1"
+      className="text-white flex items-center bg-amber-700 hover:bg-amber-800 focus:ring-4 focus:outline-none focus:ring-amber-300 font-medium rounded-lg text-sm px-3 py-1.5 text-center dark:bg-amber-600 dark:hover:bg-amber-700 dark:focus:ring-amber-800 justify-center gap-x-1"
     >
       <span>
         <Plus />

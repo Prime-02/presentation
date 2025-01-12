@@ -8,9 +8,8 @@ import { BsShieldCheck } from "react-icons/bs";
 import { GiFamilyHouse } from "react-icons/gi";
 
 export const navItems = [
-  { name: "About LAWCHECK", href: "/#" },
-  { name: "Contact Us", href: "/#" },
-  { name: "FAQ", href: "/#" },
+  { name: "Contact Us", href: "/contact" },
+  { name: "FAQ", href: "/faq" },
 ];
 
 export const OnboardingTexts = {
@@ -259,3 +258,8 @@ export const Testimonials = [
   },
 ];
 
+export const ContactUs = {
+  title: "Contact us",
+  heading: `Get in Touch, We’d Love to Hear from You`,
+  subHeading: `Have questions or need assistance? Reach out to us anytime—we're here to help!`,
+};

@@ -90,7 +90,7 @@ const Navbar = () => {
         </span>
       </nav>
       <aside
-        className={`fixed flex flex-col justify-around items-start py-8 z-50 h-screen top-0 bottom-0 w-[80%] sm:w-[60%] md:w-[40%] lg:w-[30%] xl:w-[25%] bg-white right-0 rounded-l-2xl border shadow-lg transition-transform duration-500 ${
+        className={`fixed md:hidden flex flex-col justify-around items-start py-8 z-50 h-screen top-0 bottom-0 w-[80%] sm:w-[60%] md:w-[40%] lg:w-[30%] xl:w-[25%] bg-white right-0 rounded-l-2xl border shadow-lg transition-transform duration-500 ${
           aside ? "translate-x-0" : "translate-x-full"
         } md:translate-x-0 md:static md:flex-row md:justify-between md:items-center md:py-4 md:h-auto md:bg-transparent md:border-none`}
       >

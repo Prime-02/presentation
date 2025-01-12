@@ -3,14 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { Textinput } from "../inputs/Textinput";
 import Logo from "../../../public/assets/images/lawchecks (2).png";
-import { ButtonTwo } from "../reusables/buttons/Buttons";
+import { ButtonTwo, DBButtonTwo } from "../reusables/buttons/Buttons";
 
 const FooterTwo = () => {
   const [footerEmail, setFooterEmail] = useState("");
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-gray-300 py-10">
+    <footer className="bg-amber-900 text-white py-10">
       <div className="container mx-auto px-5">
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
@@ -22,7 +22,7 @@ const FooterTwo = () => {
                 Law Checks
               </span>
             </div>
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-white">
               Your trusted partner for expert legal guidance. Empowering you
               with solutions for a secure future.
             </p>
@@ -60,25 +60,25 @@ const FooterTwo = () => {
             <h3 className="text-lg font-medium text-white mb-4">
               Stay Connected
             </h3>
-            <p className="text-sm text-gray-400 mb-4">
+            <p className="text-sm text-white mb-4">
               Subscribe to our newsletter for the latest updates and insights.
             </p>
             <Textinput
               type="email"
               label="Email Address"
               labelStyle="hidden"
-              className="w-full p-2 border border-gray-700 bg-gray-800 text-white rounded-md"
+              className="w-full p-2 border border-gray-700 bg-white text-amber-500 rounded-md"
               value={footerEmail}
               changed={(e) => setFooterEmail(e.target.value)}
             />
             <div className="mt-4">
-              <ButtonTwo buttonValue="Subscribe" />
+              <DBButtonTwo buttonValue="Subscribe" />
             </div>
           </div>
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-700 pt-6">
+        <div className="border-t border-white pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm">
               &copy; {currentYear} Law Checks. All rights reserved.

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ButtonOne, ButtonTwo } from "../reusables/buttons/Buttons";
 import Image from "next/image";
 import Logo from "../../../public/assets/images/lawchecks (2).png";
@@ -7,6 +7,7 @@ import Link from "next/link";
 import { ChevronDown, ChevronUp, Menu, X } from "lucide-react";
 import Modal from "../Modal/Modal";
 import { Textinput } from "../inputs/Textinput";
+import { disablePageScroll, enablePageScroll } from "scroll-lock";
 
 const NavTwo = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -46,6 +47,14 @@ const NavTwo = () => {
     }
     alert("Sign Up Successful");
   };
+
+  useEffect(() => {
+      if (!dropdownOpen) {
+        enablePageScroll();
+      } else {
+        disablePageScroll();
+      }
+    }, [dropdownOpen]);
 
   return (
     <nav className="bg-white fixed top-0 w-full z-50 border-b shadow-sm">
