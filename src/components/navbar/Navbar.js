@@ -23,13 +23,6 @@ const Navbar = () => {
   });
   const [loginModal, setLoginModal] = useState(false);
   const [SignUpmodal, setSignUpModal] = useState(false);
-  useEffect(() => {
-    if (!aside) {
-      enablePageScroll();
-    } else {
-      disablePageScroll();
-    }
-  }, [aside]);
 
   const loginSubmit = (e) => {
     e.preventDefault();

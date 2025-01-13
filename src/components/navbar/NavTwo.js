@@ -48,13 +48,7 @@ const NavTwo = () => {
     alert("Sign Up Successful");
   };
 
-  useEffect(() => {
-      if (!dropdownOpen) {
-        enablePageScroll();
-      } else {
-        disablePageScroll();
-      }
-    }, [dropdownOpen]);
+
 
   return (
     <nav className="bg-white fixed top-0 w-full z-50 border-b shadow-sm">
